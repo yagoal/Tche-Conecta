@@ -7,16 +7,14 @@
 
 import Foundation
 
-
-struct Person:  Identifiable {
+struct Person: Identifiable {
     let id: Int
     let name: String
-    let profession: String
-    let area: String
+    let profession: Profession
     let image: String
     let rank: Int
     
     var professionAndArea: String {
-        return profession + " - " + area
+        return profession.title + " - " + profession.area
     }
 }

@@ -44,6 +44,19 @@ final class AppCoordinator: ObservableObject {
         rootViewController.pushViewController(host, animated: true)
     }
 
+    func showRequestServicesDetails(person: Person) {
+        let requestServicesView = ServiceRequestDetailView(
+            name: person.name,
+            profession: person.profession.title,
+            rankingPosition: person.rank
+        )
+        .environmentObject(self)
+
+        let host = UIHostingController(rootView: requestServicesView)
+        configureBackButton(for: host)
+        rootViewController.pushViewController(host, animated: true)
+    }
+
     func popToRoot() {
         rootViewController.popToRootViewController(animated: true)
     }
@@ -55,7 +68,16 @@ final class AppCoordinator: ObservableObject {
     }
     
     private func configureBackButton(for hostingController: UIHostingController<some View>) {
-        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let backButton = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: #selector(pop)
+        )
         hostingController.navigationItem.backBarButtonItem = backButton
+    }
+
+    @objc func pop() {
+        rootViewController.popViewController(animated: true)
     }
 }

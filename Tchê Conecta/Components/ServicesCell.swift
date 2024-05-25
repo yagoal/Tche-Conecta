@@ -21,7 +21,7 @@ struct ServicesCell: View {
             Text(person.name)
               .fontWeight(.semibold)
 //              .padding([.leading, .trailing, .bottom], 1)
-            Text(person.profession)
+            Text(person.profession.title)
 //              .padding([.leading, .trailing, .bottom], 1)
               .font(.system(size: 15))
               .tint(.gray)
@@ -37,5 +37,5 @@ struct ServicesCell: View {
 }
 
 #Preview {
-    ServicesCell(person: Person(id: 1, name: "Mateus", profession: "Develop", area: "ios", image: "profile", rank: 4))
+    ServicesCell(person: Person(id: 1, name: "Mateus", profession: .init(id: 1, title: "Develop", area: "iOS"), image: "profile", rank: 4))
 }

@@ -29,21 +29,19 @@ struct HomeView: View {
             
             Text("Fernanda Anjos Rosario")
                 .font(.system(size: 16, weight: .semibold))
-            
-            
+
             VStack {
                 ForEach(menu) { menuItem in
                     menuBtn(menu: menuItem, triggerNextView: action(for: menuItem))
                 }
             }
             .padding(20)
-            
+
             VStack(spacing: 20){
                 Divider()
                 menuBtnLogout(title: "Sair", btncolor: .black, titleColor: .white)
             }
             .padding(20)
-            
         }
         .navigationTitle("Meu Perfil")
         .navigationBarBackButtonHidden(true)

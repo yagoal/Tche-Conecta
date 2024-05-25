@@ -9,7 +9,6 @@ import SwiftUI
 import Foundation
 
 struct RequestServicesView: View {
-    
     @EnvironmentObject var coordinator: AppCoordinator
     @State private var selectedProfession: Profession?
     @State private var searchText = ""
@@ -22,25 +21,27 @@ struct RequestServicesView: View {
         Profession(id: 5, title: "Eletricista", area: "Sistema prediais"),
         Profession(id: 6, title: "Eletricista", area: "Sistemas industriais")
     ]
-    
-    let persons: [Person] = [
-        .init(id: 1, name: "José", profession: "Pedreiro", area: "Paredes e Estrutura", image: "jose", rank: 3),
-        .init(id: 2, name: "Maria", profession: "Eletricista",area: "Sistema prediais", image: "maria", rank: 2),
-        .init(id: 3, name: "Saulo", profession: "Pedreiro", area: "Instalação Portas e Janelas", image: "saulo", rank: 1),
-        .init(id: 4, name: "Cristiana", profession: "Pedreiro", area: "Instalação Telhado e Telhas", image: "cristiana", rank: 4),
-        .init(id: 5, name: "Everton", profession: "Eletricista", area: "Sistemas industriais", image: "everton", rank: 5)
-    ]
-    
+
+    var persons: [Person] {
+        [
+            .init(id: 1, name: "José", profession: professions[0], image: "jose", rank: 3),
+            .init(id: 2, name: "Maria", profession: professions[1], image: "maria", rank: 2),
+            .init(id: 3, name: "Saulo", profession: professions[2], image: "saulo", rank: 1),
+            .init(id: 4, name: "Cristiana", profession: professions[3], image: "cristiana", rank: 4),
+            .init(id: 5, name: "Everton", profession: professions[4], image: "everton", rank: 5)
+        ]
+    }
+
     private let adaptiveComlumns = [
         GridItem(.adaptive(minimum: 100))
     ]
-    
+
     var filteredPersons: [Person] {
         let personsRank = persons.sorted(by: {$0.rank < $1.rank})
         guard  !searchText.isEmpty else {return personsRank}
         return personsRank.filter{
-            $0.profession.localizedCaseInsensitiveContains(searchText) ||
-            $0.area.localizedCaseInsensitiveContains(searchText)  ||
+            $0.profession.title.localizedCaseInsensitiveContains(searchText) ||
+            $0.profession.area.localizedCaseInsensitiveContains(searchText)  ||
             $0.name.localizedCaseInsensitiveContains(searchText)  ||
             $0.professionAndArea.localizedCaseInsensitiveContains(searchText)
         }
@@ -71,7 +72,7 @@ struct RequestServicesView: View {
                         ZStack{
                             ServicesCell(person: person)
                                 .onTapGesture {
-                                    print(searchText)
+                                    coordinator.showRequestServicesDetails(person: person)
                                 }
                         }
                     }
