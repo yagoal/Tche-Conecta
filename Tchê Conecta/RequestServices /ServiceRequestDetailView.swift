@@ -16,9 +16,7 @@ struct ServiceRequestDetailView: View {
         Testimonial(name: "João Félix", daysAgo: 3, rating: 4.5, comment: "Muito educado")
     ]
 
-    let name: String
-    let profession: String
-    let rankingPosition: Int
+    let person: Person
 
     var body: some View {
         VStack {
@@ -31,8 +29,6 @@ struct ServiceRequestDetailView: View {
             actionButtons
         }
         .navigationBarTitle("Solicitar Serviço", displayMode: .inline)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
     }
 
     private var userInfoSection: some View {
@@ -42,18 +38,17 @@ struct ServiceRequestDetailView: View {
                 .padding(.horizontal)
             HStack {
                 VStack(alignment: .leading, spacing: 8) {
-                    infoRow(label: "Nome:", value: name)
-                    infoRow(label: "Área:", value: profession)
+                    infoRow(label: "Nome:", value: person.name)
+                    infoRow(label: "Profissão:", value: person.profession.title)
                 }
                 .padding()
                 Spacer()
                 VStack {
-                    Image(systemName: "person.crop.circle.fill")
+                    person.image
                         .resizable()
-                        .padding()
-                        .scaledToFit()
-                        .frame(width: 80, height: 80)
-                        .foregroundColor(.blue)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipShape(Circle())
                 }
             }
             .padding(.horizontal)
@@ -96,7 +91,7 @@ struct ServiceRequestDetailView: View {
         let ratings: [Rating] = [
             Rating(icon: "star.fill", value: String(format: "%.1f", totalRating / Double(testimonials.count)), description: "Avaliações"),
             Rating(icon: "person.fill", value: String(format: "%.0f%%", satisfaction), description: "Satisfação"),
-            Rating(icon: "trophy.fill", value: "#\(rankingPosition)", description: "Ranking")
+            Rating(icon: "trophy.fill", value: "#\(person.rank)", description: "Ranking")
         ]
         
         return VStack(alignment: .leading, spacing: 8) {

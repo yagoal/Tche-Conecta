@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct ServicesCell: View {
-    
+
     let person: Person
-    
+
     var body: some View {
         VStack {
-            Image(person.image)
+            person.image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
-            Text(person.name)
-              .fontWeight(.semibold)
-//              .padding([.leading, .trailing, .bottom], 1)
+
+            Text(person.name).fontWeight(.semibold)
+            
             Text(person.profession.title)
-//              .padding([.leading, .trailing, .bottom], 1)
               .font(.system(size: 15))
               .tint(.gray)
+
             HStack {
                 Image(systemName: "trophy.circle")
                 Text("#\(person.rank)")
@@ -37,5 +37,17 @@ struct ServicesCell: View {
 }
 
 #Preview {
-    ServicesCell(person: Person(id: 1, name: "Mateus", profession: .init(id: 1, title: "Develop", area: "iOS"), image: "profile", rank: 4))
+    ServicesCell(
+        person: Person(
+            id: 1,
+            name: "Mateus",
+            profession: .init(
+                id: 1,
+                title: "Develop",
+                area: "iOS"
+            ),
+            image: Image("joão"),
+            rank: 4
+        )
+    )
 }

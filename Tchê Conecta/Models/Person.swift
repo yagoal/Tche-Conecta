@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Person: Identifiable {
     let id: Int
     let name: String
     let profession: Profession
-    let image: String
+    let image: Image
     let rank: Int
     
     var professionAndArea: String {

@@ -19,8 +19,7 @@ final class AppCoordinator: ObservableObject {
     func start() {
         let loginView = LoginView().environmentObject(self)
         let host = UIHostingController(rootView: loginView)
-        configureBackButton(for: host)
-        rootViewController.pushViewController(host, animated: false)
+        rootViewController.setViewControllers([host], animated: false)
     }
 
     func showSignup() {
@@ -45,12 +44,8 @@ final class AppCoordinator: ObservableObject {
     }
 
     func showRequestServicesDetails(person: Person) {
-        let requestServicesView = ServiceRequestDetailView(
-            name: person.name,
-            profession: person.profession.title,
-            rankingPosition: person.rank
-        )
-        .environmentObject(self)
+        let requestServicesView = ServiceRequestDetailView(person: person)
+            .environmentObject(self)
 
         let host = UIHostingController(rootView: requestServicesView)
         configureBackButton(for: host)
@@ -71,7 +66,7 @@ final class AppCoordinator: ObservableObject {
         let backButton = UIBarButtonItem(
             title: "",
             style: .plain,
-            target: nil,
+            target: self,
             action: #selector(pop)
         )
         hostingController.navigationItem.backBarButtonItem = backButton

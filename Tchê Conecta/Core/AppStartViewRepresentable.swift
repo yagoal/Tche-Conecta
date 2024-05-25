@@ -13,6 +13,7 @@ struct AppStartViewRepresentable: UIViewControllerRepresentable {
         let navigationController = UINavigationController()
         let coordinator = AppCoordinator(rootViewController: navigationController)
         coordinator.start()
+
         return navigationController
     }
 
