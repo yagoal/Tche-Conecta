@@ -114,11 +114,6 @@ extension View {
         .tint(btncolor)
         
     }
-    
-    
-    
-    
-    
 }
 
 

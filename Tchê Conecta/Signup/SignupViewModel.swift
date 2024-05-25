@@ -12,6 +12,7 @@ class SignupViewModel: ObservableObject {
     @Published var email = ""
     @Published var username = ""
     @Published var password = ""
+    @Published var document = ""
     @Published var confirmPassword = ""
     @Published var searchText = ""
     @Published var selectedProfession: Profession?

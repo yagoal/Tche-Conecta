@@ -14,10 +14,10 @@ struct SignupView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 30) {
-                habilidadeView
-                cadastroFormView
+                skillView
+                formView
                 registerButton
-                termosDeServicoView
+                termsAndServiceView
             }
             .padding(EdgeInsets(top: 0, leading: 24, bottom: 27, trailing: 24))
             .frame(width: 375, alignment: .leading)
@@ -26,7 +26,7 @@ struct SignupView: View {
         }
     }
 
-    private var habilidadeView: some View {
+    private var skillView: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Selecione sua habilidade")
                 .font(.system(size: 16, weight: .semibold, design: .default))
@@ -37,14 +37,29 @@ struct SignupView: View {
         }
     }
 
-    private var cadastroFormView: some View {
+    private var formView: some View {
         VStack(spacing: 25) {
-            CustomTextField(placeholder: "E-mail", text: $viewModel.email)
-                .zIndex(0)
+            CustomTextField(
+                placeholder: "E-mail",
+                text: $viewModel.email,
+                keyboardType: .emailAddress
+            )
+            .zIndex(0)
+
             CustomTextField(placeholder: "Usuário", text: $viewModel.username)
                 .zIndex(0)
+            
+            CustomTextField(
+                placeholder: "CPF/CNPJ",
+                text: $viewModel.document,
+                keyboardType : .numberPad,
+                type: .document
+            )
+            .zIndex(0)
+
             CustomPasswordField(placeholder: "Senha", text: $viewModel.password)
                 .zIndex(0)
+
             CustomPasswordField(placeholder: "Confirme sua senha", text: $viewModel.confirmPassword)
                 .zIndex(0)
         }
@@ -79,7 +94,7 @@ struct SignupView: View {
         .customButtonStyle()
     }
 
-    private var termosDeServicoView: some View {
+    private var termsAndServiceView: some View {
         Button(action: {
             // Ação para o botão "Termos de Serviço e Política de Privacidade"
         }) {

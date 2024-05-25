@@ -31,33 +31,39 @@ struct SearchableDropdown: View {
                 .overlay(
                     HStack {
                         Spacer()
-                        Button(action: {
-                            withAnimation {
-                                self.isDropdownVisible.toggle()
-                            }
-                        }) {
-                            Image(systemName: isDropdownVisible ? "chevron.up" : "chevron.down")
-                                .foregroundColor(.gray)
-                        }
+                        Image(systemName: isDropdownVisible ? "chevron.up" : "chevron.down")
+                            .foregroundColor(.gray)
+                            .padding(.trailing, 8)
                     }
-                    .padding(.trailing, 8)
                 )
-            }
-            .onTapGesture {
-                withAnimation {
-                    self.isDropdownVisible.toggle()
+                .onTapGesture {
+                    withAnimation {
+                        isDropdownVisible.toggle()
+                    }
                 }
             }
-
+            
             if isDropdownVisible {
                 VStack(alignment: .leading) {
                     ScrollView {
                         VStack(alignment: .leading) {
                             if filteredSuggestions.isEmpty {
-                                Text("Nenhum resultado encontrado")
-                                    .padding()
-                                    .foregroundColor(.gray)
-                                    .transition(.opacity)
+                                if let selected = selectedProfession {
+                                    Text("\(selected.title) - \(selected.area)")
+                                        .padding()
+                                        .background(Color(.systemGray6))
+                                        .onTapGesture {
+                                            withAnimation {
+                                                searchText = "\(selected.title) - \(selected.area)"
+                                                isDropdownVisible = false
+                                            }
+                                        }
+                                } else {
+                                    Text("Nenhum resultado encontrado")
+                                        .padding()
+                                        .foregroundColor(.gray)
+                                        .transition(.opacity)
+                                }
                             } else {
                                 ForEach(filteredSuggestions) { suggestion in
                                     Text("\(suggestion.title) - \(suggestion.area)")
@@ -65,9 +71,9 @@ struct SearchableDropdown: View {
                                         .background(Color(.systemGray6))
                                         .onTapGesture {
                                             withAnimation {
-                                                self.selectedProfession = suggestion
-                                                self.searchText = "\(suggestion.title) - \(suggestion.area)"
-                                                self.isDropdownVisible = false
+                                                selectedProfession = suggestion
+                                                searchText = "\(suggestion.title) - \(suggestion.area)"
+                                                isDropdownVisible = false
                                             }
                                         }
                                 }
@@ -83,6 +89,24 @@ struct SearchableDropdown: View {
                     .transition(.move(edge: .top).combined(with: .opacity))
                     .animation(.easeInOut(duration: 0.3))
                 }
+            }
+            
+            if !searchText.isEmpty || (isDropdownVisible &&  !searchText.isEmpty) {
+                Button(action: {
+                    withAnimation {
+                        searchText = ""
+                        selectedProfession = nil
+                        isDropdownVisible = false
+                    }
+                }) {
+                    HStack {
+                        Spacer()
+                        Text("Limpar")
+                            .foregroundColor(.blue)
+                    }
+                }
+                
+                .padding(.top, 8)
             }
         }
         .background(Color.white)

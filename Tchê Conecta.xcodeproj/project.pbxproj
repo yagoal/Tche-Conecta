@@ -21,6 +21,7 @@
 		2027225B2C022F8100102EF7 /* AppStartViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027225A2C022F8100102EF7 /* AppStartViewRepresentable.swift */; };
 		2027225D2C022F9B00102EF7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027225C2C022F9B00102EF7 /* AppCoordinator.swift */; };
 		202724FC2C023FA700102EF7 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202724FB2C023FA700102EF7 /* SignupViewModel.swift */; };
+		202725002C02514A00102EF7 /* MaskedTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202724FF2C02514A00102EF7 /* MaskedTextFieldModifier.swift */; };
 		E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA3F2C02209F00B5A885 /* HomeView.swift */; };
 		E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA412C0220ED00B5A885 /* Menu.swift */; };
 		E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA442C02401300B5A885 /* RequestServicesView.swift */; };
@@ -45,6 +46,7 @@
 		2027225A2C022F8100102EF7 /* AppStartViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewRepresentable.swift; sourceTree = "<group>"; };
 		2027225C2C022F9B00102EF7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		202724FB2C023FA700102EF7 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		202724FF2C02514A00102EF7 /* MaskedTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedTextFieldModifier.swift; sourceTree = "<group>"; };
 		E54DAA3F2C02209F00B5A885 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E54DAA412C0220ED00B5A885 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E54DAA442C02401300B5A885 /* RequestServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServicesView.swift; sourceTree = "<group>"; };
@@ -117,12 +119,8 @@
 		202722452C018F5F00102EF7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				202722402C018F5F00102EF7 /* CustomButtonStyle.swift */,
-				202722412C018F5F00102EF7 /* CustomPasswordField.swift */,
-				202722422C018F5F00102EF7 /* CustomTextField.swift */,
-				202722432C018F5F00102EF7 /* CustomTextStyle.swift */,
-				202722442C018F5F00102EF7 /* SearchableDropdown.swift */,
-				E54DAA462C02602500B5A885 /* ServicesCell.swift */,
+				202724FE2C02513300102EF7 /* Views */,
+				202724FD2C02512E00102EF7 /* Helpers */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -161,6 +159,26 @@
 				2027225C2C022F9B00102EF7 /* AppCoordinator.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		202724FD2C02512E00102EF7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				202724FF2C02514A00102EF7 /* MaskedTextFieldModifier.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		202724FE2C02513300102EF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				202722402C018F5F00102EF7 /* CustomButtonStyle.swift */,
+				202722412C018F5F00102EF7 /* CustomPasswordField.swift */,
+				202722422C018F5F00102EF7 /* CustomTextField.swift */,
+				202722432C018F5F00102EF7 /* CustomTextStyle.swift */,
+				202722442C018F5F00102EF7 /* SearchableDropdown.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E54DAA3E2C02207700B5A885 /* HomeView */ = {
@@ -257,6 +275,7 @@
 				E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */,
 				202722312C018F3F00102EF7 /* Tche__ConectaApp.swift in Sources */,
 				E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */,
+				202725002C02514A00102EF7 /* MaskedTextFieldModifier.swift in Sources */,
 				202722522C018F9A00102EF7 /* Profession.swift in Sources */,
 				2027224E2C018F6600102EF7 /* SearchableDropdown.swift in Sources */,
 				E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */,
