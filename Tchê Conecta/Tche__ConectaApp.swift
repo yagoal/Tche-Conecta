@@ -11,7 +11,7 @@ import SwiftUI
 struct Tche__ConectaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

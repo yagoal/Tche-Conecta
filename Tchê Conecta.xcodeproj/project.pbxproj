@@ -8,18 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		202722312C018F3F00102EF7 /* Tche__ConectaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722302C018F3F00102EF7 /* Tche__ConectaApp.swift */; };
-		202722332C018F3F00102EF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722322C018F3F00102EF7 /* ContentView.swift */; };
 		202722352C018F4100102EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202722342C018F4100102EF7 /* Assets.xcassets */; };
 		202722392C018F4100102EF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202722382C018F4100102EF7 /* Preview Assets.xcassets */; };
+		2027224A2C018F6600102EF7 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722402C018F5F00102EF7 /* CustomButtonStyle.swift */; };
+		2027224B2C018F6600102EF7 /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722412C018F5F00102EF7 /* CustomPasswordField.swift */; };
+		2027224C2C018F6600102EF7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722422C018F5F00102EF7 /* CustomTextField.swift */; };
+		2027224D2C018F6600102EF7 /* CustomTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722432C018F5F00102EF7 /* CustomTextStyle.swift */; };
+		2027224E2C018F6600102EF7 /* SearchableDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722442C018F5F00102EF7 /* SearchableDropdown.swift */; };
+		2027224F2C018F6600102EF7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722462C018F6000102EF7 /* LoginView.swift */; };
+		202722502C018F6600102EF7 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722482C018F6500102EF7 /* SignupView.swift */; };
+		202722522C018F9A00102EF7 /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722512C018F9A00102EF7 /* Profession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2027222D2C018F3F00102EF7 /* Tchê Conecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tchê Conecta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		202722302C018F3F00102EF7 /* Tche__ConectaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tche__ConectaApp.swift; sourceTree = "<group>"; };
-		202722322C018F3F00102EF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		202722342C018F4100102EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		202722362C018F4100102EF7 /* Tche__Conecta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tche__Conecta.entitlements; sourceTree = "<group>"; };
 		202722382C018F4100102EF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		202722402C018F5F00102EF7 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		202722412C018F5F00102EF7 /* CustomPasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
+		202722422C018F5F00102EF7 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		202722432C018F5F00102EF7 /* CustomTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextStyle.swift; sourceTree = "<group>"; };
+		202722442C018F5F00102EF7 /* SearchableDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableDropdown.swift; sourceTree = "<group>"; };
+		202722462C018F6000102EF7 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		202722482C018F6500102EF7 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		202722512C018F9A00102EF7 /* Profession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +66,12 @@
 		2027222F2C018F3F00102EF7 /* Tchê Conecta */ = {
 			isa = PBXGroup;
 			children = (
+				202722532C018FA100102EF7 /* Models */,
+				202722452C018F5F00102EF7 /* Components */,
+				202722472C018F6000102EF7 /* Login */,
+				2027223F2C018F5200102EF7 /* Preview Content */,
+				202722492C018F6500102EF7 /* Signup */,
 				202722302C018F3F00102EF7 /* Tche__ConectaApp.swift */,
-				202722322C018F3F00102EF7 /* ContentView.swift */,
 				202722342C018F4100102EF7 /* Assets.xcassets */,
 				202722362C018F4100102EF7 /* Tche__Conecta.entitlements */,
 				202722372C018F4100102EF7 /* Preview Content */,
@@ -67,6 +85,50 @@
 				202722382C018F4100102EF7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2027223F2C018F5200102EF7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Preview Content";
+			path = "../../../Documents/Project/Preview Content";
+			sourceTree = "<group>";
+		};
+		202722452C018F5F00102EF7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				202722402C018F5F00102EF7 /* CustomButtonStyle.swift */,
+				202722412C018F5F00102EF7 /* CustomPasswordField.swift */,
+				202722422C018F5F00102EF7 /* CustomTextField.swift */,
+				202722432C018F5F00102EF7 /* CustomTextStyle.swift */,
+				202722442C018F5F00102EF7 /* SearchableDropdown.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		202722472C018F6000102EF7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				202722462C018F6000102EF7 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		202722492C018F6500102EF7 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				202722482C018F6500102EF7 /* SignupView.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		202722532C018FA100102EF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				202722512C018F9A00102EF7 /* Profession.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202722332C018F3F00102EF7 /* ContentView.swift in Sources */,
+				202722502C018F6600102EF7 /* SignupView.swift in Sources */,
+				2027224A2C018F6600102EF7 /* CustomButtonStyle.swift in Sources */,
+				2027224B2C018F6600102EF7 /* CustomPasswordField.swift in Sources */,
 				202722312C018F3F00102EF7 /* Tche__ConectaApp.swift in Sources */,
+				202722522C018F9A00102EF7 /* Profession.swift in Sources */,
+				2027224E2C018F6600102EF7 /* SearchableDropdown.swift in Sources */,
+				2027224C2C018F6600102EF7 /* CustomTextField.swift in Sources */,
+				2027224F2C018F6600102EF7 /* LoginView.swift in Sources */,
+				2027224D2C018F6600102EF7 /* CustomTextStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
