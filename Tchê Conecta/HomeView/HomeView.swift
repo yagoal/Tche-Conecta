@@ -35,11 +35,11 @@ struct HomeView: View {
             
             VStack {
                 
-                menuBtn(title: menu[0].title, image: menu[0].image, btncolor: .menu, titleColor: .black, nextView: LoginView())
-                menuBtn(title: menu[1].title, image: menu[1].image, btncolor: .menu, titleColor: .black, nextView: LoginView())
-                menuBtn(title: menu[2].title, image: menu[2].image, btncolor: .menu, titleColor: .black, nextView: LoginView())
-                menuBtn(title: menu[3].title, image: menu[3].image, btncolor: .menu, titleColor: .black, nextView: LoginView())
-                menuBtn(title: menu[4].title, image: menu[4].image, btncolor: .menu, titleColor: .black, nextView: LoginView())
+                menuBtn(title: menu[0].title, image: menu[0].image, btncolor: .menu, titleColor: .black, triggerNextView: coordinator.showRequestServices)
+                menuBtn(title: menu[1].title, image: menu[1].image, btncolor: .menu, titleColor: .black,  triggerNextView: coordinator.showRequestServices)
+                menuBtn(title: menu[2].title, image: menu[2].image, btncolor: .menu, titleColor: .black,  triggerNextView: coordinator.showRequestServices)
+                menuBtn(title: menu[3].title, image: menu[3].image, btncolor: .menu, titleColor: .black, triggerNextView: coordinator.showRequestServices)
+                menuBtn(title: menu[4].title, image: menu[4].image, btncolor: .menu, titleColor: .black, triggerNextView: coordinator.showRequestServices)
                 
                 
             }
@@ -87,8 +87,16 @@ struct HomeView: View {
 }
 
 extension View {
-    func menuBtn(title: String, image: String, btncolor: Color, titleColor: Color, nextView: some View) -> some View {
-        return NavigationLink(destination: nextView) {
+    
+    func menuBtn(
+        title: String,
+        image: String,
+        btncolor: Color,
+        titleColor: Color,
+        triggerNextView: @escaping () -> Void
+    ) -> some View {
+        
+        return  Button(action: triggerNextView, label: {
             Label(
                 title: { Text(title) },
                 icon: { Image(systemName: image) }
@@ -100,10 +108,11 @@ extension View {
             Image(systemName: "chevron.right")
                 .foregroundStyle(.black)
             
-        }
+        })
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
         .tint(btncolor)
+        
     }
     
     

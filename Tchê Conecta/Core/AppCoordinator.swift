@@ -32,6 +32,12 @@ class AppCoordinator: ObservableObject {
         let host = UIHostingController(rootView: homeView)
         rootViewController.pushViewController(host, animated: true)
     }
+    
+    func showRequestServices() {
+        let requestServicesView = RequestServicesView().environmentObject(self)
+        let host = UIHostingController(rootView: requestServicesView)
+        rootViewController.pushViewController(host, animated: true)
+    }
 
     func popToRoot() {
         rootViewController.popToRootViewController(animated: true)

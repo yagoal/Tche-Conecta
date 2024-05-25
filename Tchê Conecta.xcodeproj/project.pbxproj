@@ -23,6 +23,9 @@
 		202724FC2C023FA700102EF7 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202724FB2C023FA700102EF7 /* SignupViewModel.swift */; };
 		E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA3F2C02209F00B5A885 /* HomeView.swift */; };
 		E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA412C0220ED00B5A885 /* Menu.swift */; };
+		E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA442C02401300B5A885 /* RequestServicesView.swift */; };
+		E54DAA472C02602600B5A885 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA462C02602500B5A885 /* ServicesCell.swift */; };
+		E54DAA492C02606F00B5A885 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA482C02606F00B5A885 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		202724FB2C023FA700102EF7 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		E54DAA3F2C02209F00B5A885 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E54DAA412C0220ED00B5A885 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		E54DAA442C02401300B5A885 /* RequestServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServicesView.swift; sourceTree = "<group>"; };
+		E54DAA462C02602500B5A885 /* ServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
+		E54DAA482C02606F00B5A885 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		2027222F2C018F3F00102EF7 /* Tchê Conecta */ = {
 			isa = PBXGroup;
 			children = (
+				E54DAA432C023FDB00B5A885 /* RequestServices  */,
 				202722592C022F6D00102EF7 /* Core */,
 				202722532C018FA100102EF7 /* Models */,
 				202722452C018F5F00102EF7 /* Components */,
@@ -115,6 +122,7 @@
 				202722422C018F5F00102EF7 /* CustomTextField.swift */,
 				202722432C018F5F00102EF7 /* CustomTextStyle.swift */,
 				202722442C018F5F00102EF7 /* SearchableDropdown.swift */,
+				E54DAA462C02602500B5A885 /* ServicesCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 			children = (
 				202722512C018F9A00102EF7 /* Profession.swift */,
 				E54DAA412C0220ED00B5A885 /* Menu.swift */,
+				E54DAA482C02606F00B5A885 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +169,14 @@
 				E54DAA3F2C02209F00B5A885 /* HomeView.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		E54DAA432C023FDB00B5A885 /* RequestServices  */ = {
+			isa = PBXGroup;
+			children = (
+				E54DAA442C02401300B5A885 /* RequestServicesView.swift */,
+			);
+			path = "RequestServices ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,15 +253,18 @@
 				2027224A2C018F6600102EF7 /* CustomButtonStyle.swift in Sources */,
 				2027225D2C022F9B00102EF7 /* AppCoordinator.swift in Sources */,
 				2027224B2C018F6600102EF7 /* CustomPasswordField.swift in Sources */,
+				E54DAA472C02602600B5A885 /* ServicesCell.swift in Sources */,
 				E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */,
 				202722312C018F3F00102EF7 /* Tche__ConectaApp.swift in Sources */,
 				E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */,
 				202722522C018F9A00102EF7 /* Profession.swift in Sources */,
 				2027224E2C018F6600102EF7 /* SearchableDropdown.swift in Sources */,
+				E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */,
 				2027225B2C022F8100102EF7 /* AppStartViewRepresentable.swift in Sources */,
 				202724FC2C023FA700102EF7 /* SignupViewModel.swift in Sources */,
 				2027224C2C018F6600102EF7 /* CustomTextField.swift in Sources */,
 				2027224F2C018F6600102EF7 /* LoginView.swift in Sources */,
+				E54DAA492C02606F00B5A885 /* Person.swift in Sources */,
 				2027224D2C018F6600102EF7 /* CustomTextStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
