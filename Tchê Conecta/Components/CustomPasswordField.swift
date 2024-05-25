@@ -17,11 +17,13 @@ struct CustomPasswordField: View {
             if isPasswordVisible {
                 TextField(placeholder, text: $text)
                     .font(.system(size: 14, design: .default))
+                    .autocapitalization(.none)
                     .lineSpacing(19.60)
                     .foregroundColor(Color(red: 0.51, green: 0.51, blue: 0.51))
             } else {
                 SecureField(placeholder, text: $text)
                     .font(.system(size: 14, design: .default))
+                    .autocapitalization(.none)
                     .lineSpacing(19.60)
                     .foregroundColor(Color(red: 0.51, green: 0.51, blue: 0.51))
             }

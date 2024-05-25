@@ -9,6 +9,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var isLoading = false
     @EnvironmentObject var coordinator: AppCoordinator
 
     var body: some View {
@@ -35,18 +36,30 @@ struct LoginView: View {
                         CustomPasswordField(placeholder: "Password", text: $password)
 
                         Button(action: {
-                            coordinator.showHome()
-                        }) {
-                            HStack {
-                                Text("Entrar")
-                                    .font(.system(size: 16, weight: .medium, design: .default))
-                                    .lineSpacing(22.40)
-                                    .foregroundColor(.white)
+                            isLoading = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                isLoading = false
+                                coordinator.showHome()
                             }
-                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-                            .frame(maxWidth: .infinity, minHeight: 40, maxHeight: 40)
-                            .background(.black)
-                            .cornerRadius(8)
+                        }) {
+                            if isLoading {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                    .frame(maxWidth: .infinity, minHeight: 40, maxHeight: 40)
+                                    .background(.black)
+                                    .cornerRadius(8)
+                            } else {
+                                HStack {
+                                    Text("Entrar")
+                                        .font(.system(size: 16, weight: .medium, design: .default))
+                                        .lineSpacing(22.40)
+                                        .foregroundColor(.white)
+                                }
+                                .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                                .frame(maxWidth: .infinity, minHeight: 40, maxHeight: 40)
+                                .background(.black)
+                                .cornerRadius(8)
+                            }
                         }
 
                         VStack(spacing: 8) {
@@ -75,6 +88,10 @@ struct LoginView: View {
                 Spacer()
             }
             .padding(.top, 50)
+        }
+        .onAppear {
+            email = ""
+            password = ""
         }
     }
 }

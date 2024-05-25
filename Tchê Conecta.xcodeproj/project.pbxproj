@@ -20,6 +20,7 @@
 		202722522C018F9A00102EF7 /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202722512C018F9A00102EF7 /* Profession.swift */; };
 		2027225B2C022F8100102EF7 /* AppStartViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027225A2C022F8100102EF7 /* AppStartViewRepresentable.swift */; };
 		2027225D2C022F9B00102EF7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027225C2C022F9B00102EF7 /* AppCoordinator.swift */; };
+		202724FC2C023FA700102EF7 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202724FB2C023FA700102EF7 /* SignupViewModel.swift */; };
 		E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA3F2C02209F00B5A885 /* HomeView.swift */; };
 		E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA412C0220ED00B5A885 /* Menu.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		202722512C018F9A00102EF7 /* Profession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
 		2027225A2C022F8100102EF7 /* AppStartViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewRepresentable.swift; sourceTree = "<group>"; };
 		2027225C2C022F9B00102EF7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		202724FB2C023FA700102EF7 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		E54DAA3F2C02209F00B5A885 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E54DAA412C0220ED00B5A885 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				202722482C018F6500102EF7 /* SignupView.swift */,
+				202724FB2C023FA700102EF7 /* SignupViewModel.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				202722522C018F9A00102EF7 /* Profession.swift in Sources */,
 				2027224E2C018F6600102EF7 /* SearchableDropdown.swift in Sources */,
 				2027225B2C022F8100102EF7 /* AppStartViewRepresentable.swift in Sources */,
+				202724FC2C023FA700102EF7 /* SignupViewModel.swift in Sources */,
 				2027224C2C018F6600102EF7 /* CustomTextField.swift in Sources */,
 				2027224F2C018F6600102EF7 /* LoginView.swift in Sources */,
 				2027224D2C018F6600102EF7 /* CustomTextStyle.swift in Sources */,
