@@ -40,10 +40,12 @@ struct LoginView: View {
                         }) {
                             HStack {
                                 Spacer()
-                                Text("Entrar")
-                                    .font(.system(size: 16, weight: .medium, design: .default))
-                                    .lineSpacing(22.40)
-                                    .foregroundColor(.white)
+                                NavigationLink(destination: HomeView()) {
+                                    Text("Entrar")
+                                        .font(.system(size: 16, weight: .medium, design: .default))
+                                        .lineSpacing(22.40)
+                                        .foregroundColor(.white)
+                                }
                                 Spacer()
                             }
                             .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
