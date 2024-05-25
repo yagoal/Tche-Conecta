@@ -13,13 +13,6 @@ struct AppStartViewRepresentable: UIViewControllerRepresentable {
         let navigationController = UINavigationController()
         let coordinator = AppCoordinator(rootViewController: navigationController)
         coordinator.start()
-
-        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        UINavigationBar.appearance().backIndicatorImage = UIImage(systemName: "chevron.left")
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.left")
-        UINavigationBar.appearance().tintColor = .blue
-        navigationController.navigationBar.topItem?.backBarButtonItem = backButton
-
         return navigationController
     }
 

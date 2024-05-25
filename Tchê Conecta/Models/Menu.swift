@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Menu: Hashable {
+struct Menu: Identifiable, Equatable, Hashable {
+    let id: String
     let title: String
     let image: String
 }

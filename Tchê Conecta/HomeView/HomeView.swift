@@ -12,16 +12,14 @@ struct HomeView: View {
     @EnvironmentObject var coordinator: AppCoordinator
     
     let menu: [Menu] = [
-        .init(title: "Solicitar Serviço", image: "wrench.and.screwdriver.fill"),
-        .init(title: "Meus Serviços", image: "person.crop.rectangle.stack.fill"),
-        .init(title: "Chat", image: "ellipsis.bubble.fill"),
-        .init(title: "Pagamento", image: "creditcard.fill"),
-        .init(title: "Ranking", image: "person.3.fill")
+        .init(id: "1", title: "Solicitar Serviço", image: "wrench.and.screwdriver.fill"),
+        .init(id: "2", title: "Meus Serviços", image: "person.crop.rectangle.stack.fill"),
+        .init(id: "3", title: "Chat", image: "ellipsis.bubble.fill"),
+        .init(id: "4", title: "Pagamento", image: "creditcard.fill"),
+        .init(id: "5", title: "Ranking", image: "person.3.fill")
     ]
-    
+
     var body: some View {
-        
-        
         VStack(spacing: 50){
             Image("profile")
                 .resizable()
@@ -34,14 +32,9 @@ struct HomeView: View {
             
             
             VStack {
-                
-                menuBtn(title: menu[0].title, image: menu[0].image, btncolor: .menu, titleColor: .black, triggerNextView: coordinator.showRequestServices)
-                menuBtn(title: menu[1].title, image: menu[1].image, btncolor: .menu, titleColor: .black,  triggerNextView: coordinator.showRequestServices)
-                menuBtn(title: menu[2].title, image: menu[2].image, btncolor: .menu, titleColor: .black,  triggerNextView: coordinator.showRequestServices)
-                menuBtn(title: menu[3].title, image: menu[3].image, btncolor: .menu, titleColor: .black, triggerNextView: coordinator.showRequestServices)
-                menuBtn(title: menu[4].title, image: menu[4].image, btncolor: .menu, titleColor: .black, triggerNextView: coordinator.showRequestServices)
-                
-                
+                ForEach(menu) { menuItem in
+                    menuBtn(menu: menuItem, triggerNextView: action(for: menuItem))
+                }
             }
             .padding(20)
             
@@ -55,11 +48,19 @@ struct HomeView: View {
         .navigationTitle("Meu Perfil")
         .navigationBarBackButtonHidden(true)
     }
-    
+
+    private func action(for menu: Menu) -> () -> Void {
+        switch menu.id {
+        case "1", "2", "3", "4", "5":
+            return coordinator.showRequestServices
+        default:
+            return coordinator.showRequestServices
+        }
+    }
+
     func menuBtnLogout(title: String, btncolor: Color, titleColor: Color) -> some View {
-        
-        return  Button(action: {
-            self.showAlert = true
+        Button(action: {
+            showAlert = true
         }, label: {
             Label(
                 title: { Text(title) },
@@ -87,19 +88,16 @@ struct HomeView: View {
 }
 
 extension View {
-    
     func menuBtn(
-        title: String,
-        image: String,
-        btncolor: Color,
-        titleColor: Color,
+        menu: Menu,
+        btncolor: Color = .menu,
+        titleColor: Color = .black,
         triggerNextView: @escaping () -> Void
     ) -> some View {
-        
         return  Button(action: triggerNextView, label: {
             Label(
-                title: { Text(title) },
-                icon: { Image(systemName: image) }
+                title: { Text(menu.title) },
+                icon: { Image(systemName: menu.image) }
             )
             .font(.system(size: 17, weight: .bold))
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -115,7 +113,6 @@ extension View {
         
     }
 }
-
 
 #Preview {
     HomeView()

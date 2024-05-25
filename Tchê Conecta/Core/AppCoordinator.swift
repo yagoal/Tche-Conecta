@@ -8,38 +8,54 @@
 import SwiftUI
 import UIKit
 
-class AppCoordinator: ObservableObject {
+final class AppCoordinator: ObservableObject {
     private let rootViewController: UINavigationController
 
     init(rootViewController: UINavigationController) {
         self.rootViewController = rootViewController
+        configureNavigationAppearance()
     }
 
     func start() {
         let loginView = LoginView().environmentObject(self)
         let host = UIHostingController(rootView: loginView)
+        configureBackButton(for: host)
         rootViewController.pushViewController(host, animated: false)
     }
 
     func showSignup() {
         let signupView = SignupView().environmentObject(self)
         let host = UIHostingController(rootView: signupView)
+        configureBackButton(for: host)
         rootViewController.pushViewController(host, animated: true)
     }
 
     func showHome() {
         let homeView = HomeView().environmentObject(self)
         let host = UIHostingController(rootView: homeView)
+        configureBackButton(for: host)
         rootViewController.pushViewController(host, animated: true)
     }
     
     func showRequestServices() {
         let requestServicesView = RequestServicesView().environmentObject(self)
         let host = UIHostingController(rootView: requestServicesView)
+        configureBackButton(for: host)
         rootViewController.pushViewController(host, animated: true)
     }
 
     func popToRoot() {
         rootViewController.popToRootViewController(animated: true)
+    }
+    
+    private func configureNavigationAppearance() {
+        UINavigationBar.appearance().backIndicatorImage = UIImage(systemName: "chevron.left")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.left")
+        UINavigationBar.appearance().tintColor = .blue
+    }
+    
+    private func configureBackButton(for hostingController: UIHostingController<some View>) {
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        hostingController.navigationItem.backBarButtonItem = backButton
     }
 }

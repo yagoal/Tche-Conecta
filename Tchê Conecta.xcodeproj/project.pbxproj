@@ -22,10 +22,10 @@
 		2027225D2C022F9B00102EF7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027225C2C022F9B00102EF7 /* AppCoordinator.swift */; };
 		202724FC2C023FA700102EF7 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202724FB2C023FA700102EF7 /* SignupViewModel.swift */; };
 		202725002C02514A00102EF7 /* MaskedTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202724FF2C02514A00102EF7 /* MaskedTextFieldModifier.swift */; };
+		2027250B2C027F6900102EF7 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027250A2C027F6900102EF7 /* ServicesCell.swift */; };
 		E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA3F2C02209F00B5A885 /* HomeView.swift */; };
 		E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA412C0220ED00B5A885 /* Menu.swift */; };
 		E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA442C02401300B5A885 /* RequestServicesView.swift */; };
-		E54DAA472C02602600B5A885 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA462C02602500B5A885 /* ServicesCell.swift */; };
 		E54DAA492C02606F00B5A885 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA482C02606F00B5A885 /* Person.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +47,7 @@
 		2027225C2C022F9B00102EF7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		202724FB2C023FA700102EF7 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		202724FF2C02514A00102EF7 /* MaskedTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedTextFieldModifier.swift; sourceTree = "<group>"; };
+		2027250A2C027F6900102EF7 /* ServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesCell.swift; path = "Tchê Conecta/Components/ServicesCell.swift"; sourceTree = SOURCE_ROOT; };
 		E54DAA3F2C02209F00B5A885 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E54DAA412C0220ED00B5A885 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E54DAA442C02401300B5A885 /* RequestServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServicesView.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 			children = (
 				2027222F2C018F3F00102EF7 /* Tchê Conecta */,
 				2027222E2C018F3F00102EF7 /* Products */,
+				202725082C027EFE00102EF7 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +174,7 @@
 		202724FE2C02513300102EF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2027250A2C027F6900102EF7 /* ServicesCell.swift */,
 				202722402C018F5F00102EF7 /* CustomButtonStyle.swift */,
 				202722412C018F5F00102EF7 /* CustomPasswordField.swift */,
 				202722422C018F5F00102EF7 /* CustomTextField.swift */,
@@ -179,6 +182,14 @@
 				202722442C018F5F00102EF7 /* SearchableDropdown.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		202725082C027EFE00102EF7 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				E54DAA462C02602500B5A885 /* ServicesCell.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		E54DAA3E2C02207700B5A885 /* HomeView */ = {
@@ -271,7 +282,6 @@
 				2027224A2C018F6600102EF7 /* CustomButtonStyle.swift in Sources */,
 				2027225D2C022F9B00102EF7 /* AppCoordinator.swift in Sources */,
 				2027224B2C018F6600102EF7 /* CustomPasswordField.swift in Sources */,
-				E54DAA472C02602600B5A885 /* ServicesCell.swift in Sources */,
 				E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */,
 				202722312C018F3F00102EF7 /* Tche__ConectaApp.swift in Sources */,
 				E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */,
@@ -281,6 +291,7 @@
 				E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */,
 				2027225B2C022F8100102EF7 /* AppStartViewRepresentable.swift in Sources */,
 				202724FC2C023FA700102EF7 /* SignupViewModel.swift in Sources */,
+				2027250B2C027F6900102EF7 /* ServicesCell.swift in Sources */,
 				2027224C2C018F6600102EF7 /* CustomTextField.swift in Sources */,
 				2027224F2C018F6600102EF7 /* LoginView.swift in Sources */,
 				E54DAA492C02606F00B5A885 /* Person.swift in Sources */,

@@ -45,10 +45,8 @@ struct RequestServicesView: View {
             $0.professionAndArea.localizedCaseInsensitiveContains(searchText)
         }
     }
-    
-    
+
     var body: some View {
-        
         VStack(spacing: 20) {
             Text("Selecione o tipo de profissional:")
                 .font(.system(size: 17, weight: .bold))
@@ -80,14 +78,9 @@ struct RequestServicesView: View {
                 }
                 
             }
-            
-            
         }
         .padding(20)
         .navigationTitle("Solicitar Serviço")
-        
-        
-        
     }
 }
 
