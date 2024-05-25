@@ -5,16 +5,11 @@
 //  Created by mateusdias on 25/05/24.
 //
 
-
 import SwiftUI
 
-
-
 struct HomeView: View {
-    
-    @Environment(\.presentationMode) var presentationMode
     @State private var showAlert = false
-    
+    @EnvironmentObject var coordinator: AppCoordinator
     
     let menu: [Menu] = [
         .init(title: "Solicitar Serviço", image: "wrench.and.screwdriver.fill"),
@@ -83,15 +78,12 @@ struct HomeView: View {
                 title: Text("Atenção!"),
                 message: Text("Tem certeza que deseja sair do aplicativo ?"),
                 primaryButton: .default(Text("Sair")) {
-                    self.presentationMode.wrappedValue.dismiss()
+                    coordinator.popToRoot()
                 },
                 secondaryButton: .default(Text("Não"))
             )
         }
     }
-    
-    
-    
 }
 
 extension View {

@@ -18,7 +18,8 @@ struct SignupView: View {
     @State private var confirmPassword = ""
     @State private var searchText = ""
     @State private var selectedProfession: Profession?
-    
+    @EnvironmentObject var coordinator: AppCoordinator
+
     // Exemplo de lista de profissões
     let professions: [Profession] = [
         Profession(id: 1, title: "Pedreiro", area: "Paredes e Estrutura"),
@@ -50,7 +51,6 @@ struct SignupView: View {
                     .zIndex(0)
 
                 Button(action: {
-                    // Ação para o botão "Cadastrar"
                 }) {
                     HStack {
                         Spacer()

@@ -6,11 +6,10 @@
 //
 import SwiftUI
 
-import SwiftUI
-
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @EnvironmentObject var coordinator: AppCoordinator
 
     var body: some View {
         NavigationView {
@@ -36,17 +35,13 @@ struct LoginView: View {
                         CustomPasswordField(placeholder: "Password", text: $password)
 
                         Button(action: {
-                            // Ação para o botão "Entrar"
+                            coordinator.showHome()
                         }) {
                             HStack {
-                                Spacer()
-                                NavigationLink(destination: HomeView()) {
-                                    Text("Entrar")
-                                        .font(.system(size: 16, weight: .medium, design: .default))
-                                        .lineSpacing(22.40)
-                                        .foregroundColor(.white)
-                                }
-                                Spacer()
+                                Text("Entrar")
+                                    .font(.system(size: 16, weight: .medium, design: .default))
+                                    .lineSpacing(22.40)
+                                    .foregroundColor(.white)
                             }
                             .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
                             .frame(maxWidth: .infinity, minHeight: 40, maxHeight: 40)
@@ -55,7 +50,9 @@ struct LoginView: View {
                         }
 
                         VStack(spacing: 8) {
-                            NavigationLink(destination: SignupView()) {
+                            Button(action: {
+                                coordinator.showSignup()
+                            }) {
                                 Text("Não tem conta? Cadastre-se")
                                     .font(.system(size: 14, design: .default))
                                     .lineSpacing(21)
