@@ -68,6 +68,9 @@ struct SignupView: View {
     private var registerButton: some View {
         Button(action: {
             viewModel.register()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                coordinator.showSuccess()
+            }
         }) {
             HStack {
                 Spacer()
@@ -76,23 +79,15 @@ struct SignupView: View {
                         .progressViewStyle(CircularProgressViewStyle(tint: .white))
                 } else {
                     Text("Cadastrar")
-                        .font(.system(size: 16, weight: .medium, design: .default))
+                        .font(.system(size: 16, weight: .medium))
                         .foregroundColor(.white)
                 }
                 Spacer()
             }
         }
-        .alert(isPresented: $viewModel.showAlert) {
-            Alert(
-                title: Text("Sucesso"),
-                message: Text("Cadastro realizado com sucesso!"),
-                dismissButton: .default(Text("OK")) {
-                    coordinator.popToRoot()
-                }
-            )
-        }
         .customButtonStyle()
     }
+
 
     private var termsAndServiceView: some View {
         Button(action: {

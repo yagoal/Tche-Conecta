@@ -28,7 +28,7 @@ class SignupViewModel: ObservableObject {
 
     func register() {
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.isLoading = false
             self.showAlert = true
         }

@@ -36,13 +36,13 @@ struct RequestServicesView: View {
         ]
     }
 
-    private let adaptiveComlumns = [
+    private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 100))
     ]
 
     var filteredPersons: [Person] {
         let personsRank = persons.sorted(by: {$0.rank < $1.rank})
-        guard  !searchText.isEmpty else {return personsRank}
+        guard  !searchText.isEmpty else { return personsRank }
         return personsRank.filter{
             $0.profession.title.localizedCaseInsensitiveContains(searchText) ||
             $0.profession.area.localizedCaseInsensitiveContains(searchText)  ||
@@ -60,28 +60,40 @@ struct RequestServicesView: View {
             SearchableDropdown(searchText: $searchText, placeholder: "Profissão", suggestions: professions, selectedProfession: $selectedProfession)
                 .zIndex(1)
             
-            Text("Prestadores de Serviço")
+            Text("Prestadores de Serviço: ")
                 .font(.system(size: 17, weight: .bold))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundStyle(.black)
-            
-            Text("Selecione")
-                .font(.system(size: 15))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .foregroundStyle(.gray)
+            if !filteredPersons.isEmpty {
+                Text("Selecione")
+                    .font(.system(size: 15))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundStyle(.gray)
+            }
 
-            ScrollView{
-                LazyVGrid(columns: adaptiveComlumns, spacing: 20) {
-                    ForEach(filteredPersons) { person in
-                        ZStack{
-                            ServicesCell(person: person)
-                                .onTapGesture {
-                                    coordinator.showRequestServicesDetails(person: person)
-                                }
+            ScrollView {
+                if filteredPersons.isEmpty {
+                    VStack(spacing: 16) {
+                        Image(systemName: "exclamationmark.triangle")
+                            .font(.system(size: 50))
+                            .foregroundColor(.gray)
+                        Text("Nenhum resultado encontrado")
+                            .font(.system(size: 17))
+                            .foregroundColor(.gray)
+                    }
+                    .padding(.top, 50)
+                } else {
+                    LazyVGrid(columns: adaptiveColumns, spacing: 20) {
+                        ForEach(filteredPersons) { person in
+                            ZStack {
+                                ServicesCell(person: person)
+                                    .onTapGesture {
+                                        coordinator.showRequestServicesDetails(person: person)
+                                    }
+                            }
                         }
                     }
                 }
-                
             }
         }
         .padding(20)

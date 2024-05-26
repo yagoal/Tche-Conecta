@@ -19,7 +19,8 @@ final class AppCoordinator: ObservableObject {
     func start() {
         let loginView = LoginView().environmentObject(self)
         let host = UIHostingController(rootView: loginView)
-        rootViewController.setViewControllers([host], animated: false)
+        configureBackButton(for: host)
+        rootViewController.pushViewController(host, animated: false)
     }
 
     func showSignup() {
@@ -35,7 +36,7 @@ final class AppCoordinator: ObservableObject {
         configureBackButton(for: host)
         rootViewController.pushViewController(host, animated: true)
     }
-    
+
     func showRequestServices() {
         let requestServicesView = RequestServicesView().environmentObject(self)
         let host = UIHostingController(rootView: requestServicesView)
@@ -45,7 +46,7 @@ final class AppCoordinator: ObservableObject {
 
     func showRequestServicesDetails(person: Person) {
         let requestServicesView = ServiceRequestDetailView(person: person)
-            .environmentObject(self)
+        .environmentObject(self)
 
         let host = UIHostingController(rootView: requestServicesView)
         configureBackButton(for: host)
@@ -66,21 +67,31 @@ final class AppCoordinator: ObservableObject {
         rootViewController.pushViewController(host, animated: true)
     }
 
+    func showSuccess() {
+        let successView = SignupSuccessView().environmentObject(self)
+        let host = UIHostingController(rootView: successView)
+
+        let loginView = LoginView().environmentObject(self)
+        let loginHost = UIHostingController(rootView: loginView)
+
+        rootViewController.setViewControllers([loginHost, host], animated: true)
+    }
+
     func popToRoot() {
         rootViewController.popToRootViewController(animated: true)
     }
-    
+
     private func configureNavigationAppearance() {
         UINavigationBar.appearance().backIndicatorImage = UIImage(systemName: "chevron.left")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.left")
         UINavigationBar.appearance().tintColor = .blue
     }
-    
+ 
     private func configureBackButton(for hostingController: UIHostingController<some View>) {
         let backButton = UIBarButtonItem(
             title: "",
             style: .plain,
-            target: self,
+            target: nil,
             action: #selector(pop)
         )
         hostingController.navigationItem.backBarButtonItem = backButton
