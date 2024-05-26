@@ -102,6 +102,10 @@ final class AppCoordinator: ObservableObject {
         rootViewController.popToRootViewController(animated: true)
     }
 
+    @objc func pop() {
+        rootViewController.popViewController(animated: true)
+    }
+
     private func configureNavigationAppearance() {
         UINavigationBar.appearance().backIndicatorImage = UIImage(systemName: "chevron.left")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.left")
@@ -116,9 +120,5 @@ final class AppCoordinator: ObservableObject {
             action: #selector(pop)
         )
         hostingController.navigationItem.backBarButtonItem = backButton
-    }
-
-    @objc func pop() {
-        rootViewController.popViewController(animated: true)
     }
 }

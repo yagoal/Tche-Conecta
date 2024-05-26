@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RequestServicesDetailsView: View {
     @EnvironmentObject var coordinator: AppCoordinator
+    @State private var showingAlert = false
 
     let testimonials: [Testimonial] = [
         Testimonial(name: "Beatriz Gonçalves", daysAgo: 2, rating: 4.0, comment: "Tudo certo"),
@@ -29,6 +30,15 @@ struct RequestServicesDetailsView: View {
             actionButtons
         }
         .navigationBarTitle("Solicitar Serviço", displayMode: .inline)
+        .alert(isPresented: $showingAlert) {
+            Alert(
+                title: Text("Tudo certo"),
+                message: Text("Solicitação feita com sucesso, aguarde o profissional retornar"),
+                dismissButton: .default(Text("OK")) {
+                    coordinator.pop()
+                }
+            )
+        }
     }
 
     private var userInfoSection: some View {
@@ -111,7 +121,7 @@ struct RequestServicesDetailsView: View {
     private var actionButtons: some View {
         VStack(spacing: 16) {
             Button(action: {
-                // Action for "Solicitar Serviço"
+                showingAlert = true
             }) {
                 Text("Solicitar Serviço")
                     .font(.system(size: 16, weight: .bold))

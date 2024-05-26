@@ -36,11 +36,11 @@
 		202725212C03639900102EF7 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202725202C03639900102EF7 /* Notification.swift */; };
 		202725232C0363B600102EF7 /* RecentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202725222C0363B600102EF7 /* RecentService.swift */; };
 		202725262C0386C000102EF7 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202725252C0386C000102EF7 /* PaymentView.swift */; };
+		20B3DE0A2C03AD590017E0DA /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3DE082C03AD590017E0DA /* RankView.swift */; };
 		E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA3F2C02209F00B5A885 /* HomeView.swift */; };
 		E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA412C0220ED00B5A885 /* Menu.swift */; };
 		E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA442C02401300B5A885 /* RequestServicesView.swift */; };
 		E54DAA492C02606F00B5A885 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA482C02606F00B5A885 /* Person.swift */; };
-		E576CB612C03A98D00487320 /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E576CB5F2C03A98D00487320 /* RankView.swift */; };
 		E576CB642C03A99C00487320 /* RankedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E576CB622C03A99C00487320 /* RankedCell.swift */; };
 		E576CB652C03A99C00487320 /* TheBestRankedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E576CB632C03A99C00487320 /* TheBestRankedCell.swift */; };
 /* End PBXBuildFile section */
@@ -77,12 +77,12 @@
 		202725202C03639900102EF7 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		202725222C0363B600102EF7 /* RecentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentService.swift; sourceTree = "<group>"; };
 		202725252C0386C000102EF7 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		20B3DE082C03AD590017E0DA /* RankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
 		E54DAA3F2C02209F00B5A885 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E54DAA412C0220ED00B5A885 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E54DAA442C02401300B5A885 /* RequestServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServicesView.swift; sourceTree = "<group>"; };
 		E54DAA482C02606F00B5A885 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E55769062C02B1A0003498FE /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
-		E576CB5F2C03A98D00487320 /* RankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
 		E576CB622C03A99C00487320 /* RankedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankedCell.swift; sourceTree = "<group>"; };
 		E576CB632C03A99C00487320 /* TheBestRankedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheBestRankedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +118,7 @@
 		2027222F2C018F3F00102EF7 /* Tchê Conecta */ = {
 			isa = PBXGroup;
 			children = (
-				E576CB602C03A98D00487320 /* Rank */,
+				20B3DE092C03AD590017E0DA /* Rank */,
 				202725242C0386AE00102EF7 /* Payment */,
 				2027251B2C0361EB00102EF7 /* Chat */,
 				202725162C02B8BD00102EF7 /* MyServices */,
@@ -263,6 +263,14 @@
 			path = Payment;
 			sourceTree = "<group>";
 		};
+		20B3DE092C03AD590017E0DA /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				20B3DE082C03AD590017E0DA /* RankView.swift */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
 		E54DAA3E2C02207700B5A885 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,14 +286,6 @@
 				202725102C0283FB00102EF7 /* RequestServicesDetailsView.swift */,
 			);
 			path = "RequestServices ";
-			sourceTree = "<group>";
-		};
-		E576CB602C03A98D00487320 /* Rank */ = {
-			isa = PBXGroup;
-			children = (
-				E576CB5F2C03A98D00487320 /* RankView.swift */,
-			);
-			path = Rank;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,11 +374,11 @@
 				2027251F2C03628800102EF7 /* ChatCell.swift in Sources */,
 				202725262C0386C000102EF7 /* PaymentView.swift in Sources */,
 				202722522C018F9A00102EF7 /* Profession.swift in Sources */,
-				E576CB612C03A98D00487320 /* RankView.swift in Sources */,
 				2027250F2C0283D600102EF7 /* Testimonial.swift in Sources */,
 				2027224E2C018F6600102EF7 /* SearchableDropdown.swift in Sources */,
 				E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */,
 				2027250D2C0283C000102EF7 /* Rating.swift in Sources */,
+				20B3DE0A2C03AD590017E0DA /* RankView.swift in Sources */,
 				2027225B2C022F8100102EF7 /* AppStartViewRepresentable.swift in Sources */,
 				202724FC2C023FA700102EF7 /* SignupViewModel.swift in Sources */,
 				2027250B2C027F6900102EF7 /* ServicesCell.swift in Sources */,

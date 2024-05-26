@@ -48,10 +48,10 @@ struct MyServicesView: View {
         ]
 
         _notifications = State(initialValue: [
-            Notification(serviceName: "Marcenaria", location: "Porto Alegre, RS, Brasil", status: "pending", sender: notificationPersons[0]),
-            Notification(serviceName: "Marcenaria", location: "Caxias do Sul, RS, Brasil", status: "pending", sender: notificationPersons[1]),
-            Notification(serviceName: "Marcenaria", location: "Pelotas, RS, Brasil", status: "pending", sender: notificationPersons[2]),
-            Notification(serviceName: "Eletricista", location: "Santa Maria, RS, Brasil", status: "pending", sender: notificationPersons[3])
+            Notification(serviceName: "Design de Parede", location: "Porto Alegre, RS, Brasil", status: "pending", sender: notificationPersons[0]),
+            Notification(serviceName: "Design de Parede", location: "Caxias do Sul, RS, Brasil", status: "pending", sender: notificationPersons[1]),
+            Notification(serviceName: "Design de Piso", location: "Pelotas, RS, Brasil", status: "pending", sender: notificationPersons[2]),
+            Notification(serviceName: "Design de Piso", location: "Santa Maria, RS, Brasil", status: "pending", sender: notificationPersons[3])
         ])
     }
 
