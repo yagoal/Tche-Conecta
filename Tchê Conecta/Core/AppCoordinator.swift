@@ -51,6 +51,20 @@ final class AppCoordinator: ObservableObject {
         configureBackButton(for: host)
         rootViewController.pushViewController(host, animated: true)
     }
+    
+    func showChatList() {
+        let showChatList = ChatListView().environmentObject(self)
+        let host = UIHostingController(rootView: showChatList)
+        configureBackButton(for: host)
+        rootViewController.pushViewController(host, animated: true)
+    }
+    
+    func showChat(person: Person, message: String?) {
+        let showChat = ChatDetailView(person: person, message: message).environmentObject(self)
+        let host = UIHostingController(rootView: showChat)
+        configureBackButton(for: host)
+        rootViewController.pushViewController(host, animated: true)
+    }
 
     func popToRoot() {
         rootViewController.popToRootViewController(animated: true)

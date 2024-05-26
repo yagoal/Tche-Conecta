@@ -49,7 +49,15 @@ struct HomeView: View {
 
     private func action(for menu: Menu) -> () -> Void {
         switch menu.id {
-        case "1", "2", "3", "4", "5":
+        case "1":
+            return coordinator.showRequestServices
+        case "2":
+            return coordinator.showRequestServices
+        case "3":
+            return coordinator.showChatList
+        case "4":
+            return coordinator.showRequestServices
+        case "5":
             return coordinator.showRequestServices
         default:
             return coordinator.showRequestServices
