@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ServiceRequestDetailView: View {
+struct RequestServicesDetailsView: View {
     @EnvironmentObject var coordinator: AppCoordinator
 
     let testimonials: [Testimonial] = [

@@ -45,7 +45,7 @@ final class AppCoordinator: ObservableObject {
     }
 
     func showRequestServicesDetails(person: Person) {
-        let requestServicesView = ServiceRequestDetailView(person: person)
+        let requestServicesView = RequestServicesDetailsView(person: person)
         .environmentObject(self)
 
         let host = UIHostingController(rootView: requestServicesView)

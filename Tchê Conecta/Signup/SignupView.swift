@@ -32,8 +32,13 @@ struct SignupView: View {
                 .font(.system(size: 16, weight: .semibold, design: .default))
                 .foregroundColor(.black)
             
-            SearchableDropdown(searchText: $viewModel.searchText, placeholder: "Profissão", suggestions: viewModel.professions, selectedProfession: $viewModel.selectedProfession)
-                .zIndex(1)
+            SearchableDropdown(
+                searchText: $viewModel.searchText,
+                placeholder: "Profissão",
+                suggestions: professions,
+                selectedProfession: $viewModel.selectedProfession
+            )
+            .zIndex(1)
         }
     }
 

@@ -19,13 +19,6 @@ class SignupViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var showAlert = false
 
-    let professions: [Profession] = [
-        Profession(id: 1, title: "Pedreiro", area: "Paredes e Estrutura"),
-        Profession(id: 2, title: "Pedreiro", area: "Instalação Portas e Janelas"),
-        Profession(id: 3, title: "Pedreiro", area: "Pisos em geral"),
-        Profession(id: 4, title: "Pedreiro", area: "Instalação Telhado e Telhas")
-    ]
-
     func register() {
         isLoading = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

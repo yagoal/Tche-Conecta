@@ -25,8 +25,9 @@
 		2027250B2C027F6900102EF7 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027250A2C027F6900102EF7 /* ServicesCell.swift */; };
 		2027250D2C0283C000102EF7 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027250C2C0283C000102EF7 /* Rating.swift */; };
 		2027250F2C0283D600102EF7 /* Testimonial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027250E2C0283D600102EF7 /* Testimonial.swift */; };
-		202725112C0283FB00102EF7 /* ServiceRequestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202725102C0283FB00102EF7 /* ServiceRequestDetailView.swift */; };
+		202725112C0283FB00102EF7 /* RequestServicesDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202725102C0283FB00102EF7 /* RequestServicesDetailsView.swift */; };
 		202725132C02B26C00102EF7 /* SignupSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202725122C02B26C00102EF7 /* SignupSuccessView.swift */; };
+		202725152C02B73D00102EF7 /* Professions+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202725142C02B73D00102EF7 /* Professions+Stub.swift */; };
 		E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA3F2C02209F00B5A885 /* HomeView.swift */; };
 		E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA412C0220ED00B5A885 /* Menu.swift */; };
 		E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA442C02401300B5A885 /* RequestServicesView.swift */; };
@@ -57,8 +58,9 @@
 		2027250A2C027F6900102EF7 /* ServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesCell.swift; path = "Tchê Conecta/Components/ServicesCell.swift"; sourceTree = SOURCE_ROOT; };
 		2027250C2C0283C000102EF7 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		2027250E2C0283D600102EF7 /* Testimonial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testimonial.swift; sourceTree = "<group>"; };
-		202725102C0283FB00102EF7 /* ServiceRequestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestDetailView.swift; sourceTree = "<group>"; };
+		202725102C0283FB00102EF7 /* RequestServicesDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServicesDetailsView.swift; sourceTree = "<group>"; };
 		202725122C02B26C00102EF7 /* SignupSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSuccessView.swift; sourceTree = "<group>"; };
+		202725142C02B73D00102EF7 /* Professions+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Professions+Stub.swift"; sourceTree = "<group>"; };
 		E54DAA3F2C02209F00B5A885 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E54DAA412C0220ED00B5A885 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E54DAA442C02401300B5A885 /* RequestServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServicesView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				202724FF2C02514A00102EF7 /* MaskedTextFieldModifier.swift */,
+				202725142C02B73D00102EF7 /* Professions+Stub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -223,7 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				E54DAA442C02401300B5A885 /* RequestServicesView.swift */,
-				202725102C0283FB00102EF7 /* ServiceRequestDetailView.swift */,
+				202725102C0283FB00102EF7 /* RequestServicesDetailsView.swift */,
 			);
 			path = "RequestServices ";
 			sourceTree = "<group>";
@@ -314,10 +317,10 @@
 				E55769052C02B170003498FE /* ChatListView.swift in Sources */,
 				E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */,
 				202722312C018F3F00102EF7 /* Tche__ConectaApp.swift in Sources */,
+				202725152C02B73D00102EF7 /* Professions+Stub.swift in Sources */,
 				E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */,
 				202725002C02514A00102EF7 /* MaskedTextFieldModifier.swift in Sources */,
-				E55769072C02B1A0003498FE /* ChatCell.swift in Sources */,
-				202725112C0283FB00102EF7 /* ServiceRequestDetailView.swift in Sources */,
+				202725112C0283FB00102EF7 /* RequestServicesDetailsView.swift in Sources */,
 				202722522C018F9A00102EF7 /* Profession.swift in Sources */,
 				2027250F2C0283D600102EF7 /* Testimonial.swift in Sources */,
 				2027224E2C018F6600102EF7 /* SearchableDropdown.swift in Sources */,
