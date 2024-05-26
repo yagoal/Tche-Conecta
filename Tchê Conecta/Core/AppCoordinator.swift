@@ -73,6 +73,13 @@ final class AppCoordinator: ObservableObject {
         configureBackButton(for: host)
         rootViewController.pushViewController(host, animated: true)
     }
+    
+    func showMyPayments() {
+        let showChat = PaymentView().environmentObject(self)
+        let host = UIHostingController(rootView: showChat)
+        configureBackButton(for: host)
+        rootViewController.pushViewController(host, animated: true)
+    }
 
     func showSuccess() {
         let successView = SignupSuccessView().environmentObject(self)

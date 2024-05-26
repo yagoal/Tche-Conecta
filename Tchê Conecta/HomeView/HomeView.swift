@@ -56,7 +56,7 @@ struct HomeView: View {
         case "3":
             return coordinator.showChatList
         case "4":
-            return coordinator.showRequestServices
+            return coordinator.showMyPayments
         case "5":
             return coordinator.showRequestServices
         default:
