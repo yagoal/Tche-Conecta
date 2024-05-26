@@ -66,6 +66,13 @@ final class AppCoordinator: ObservableObject {
         configureBackButton(for: host)
         rootViewController.pushViewController(host, animated: true)
     }
+    
+    func showMyServices() {
+        let showChat = MyServicesView().environmentObject(self)
+        let host = UIHostingController(rootView: showChat)
+        configureBackButton(for: host)
+        rootViewController.pushViewController(host, animated: true)
+    }
 
     func showSuccess() {
         let successView = SignupSuccessView().environmentObject(self)

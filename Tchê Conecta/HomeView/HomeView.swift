@@ -52,7 +52,7 @@ struct HomeView: View {
         case "1":
             return coordinator.showRequestServices
         case "2":
-            return coordinator.showRequestServices
+            return coordinator.showMyServices
         case "3":
             return coordinator.showChatList
         case "4":
