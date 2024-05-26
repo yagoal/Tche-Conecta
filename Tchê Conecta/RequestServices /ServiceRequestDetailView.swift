@@ -122,7 +122,7 @@ struct ServiceRequestDetailView: View {
                     .cornerRadius(8)
             }
             Button(action: {
-                // Action for "Falar no Chat"
+                coordinator.showChat(person: person, message: nil)
             }) {
                 Text("Falar no Chat")
                     .font(.system(size: 16, weight: .bold))

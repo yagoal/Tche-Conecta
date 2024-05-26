@@ -30,6 +30,9 @@
 		E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA412C0220ED00B5A885 /* Menu.swift */; };
 		E54DAA452C02401300B5A885 /* RequestServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA442C02401300B5A885 /* RequestServicesView.swift */; };
 		E54DAA492C02606F00B5A885 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DAA482C02606F00B5A885 /* Person.swift */; };
+		E55769052C02B170003498FE /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55769042C02B170003498FE /* ChatListView.swift */; };
+		E55769072C02B1A0003498FE /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55769062C02B1A0003498FE /* ChatCell.swift */; };
+		E55769092C02B678003498FE /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55769082C02B678003498FE /* ChatDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		E54DAA442C02401300B5A885 /* RequestServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServicesView.swift; sourceTree = "<group>"; };
 		E54DAA462C02602500B5A885 /* ServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
 		E54DAA482C02606F00B5A885 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E55769042C02B170003498FE /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		E55769062C02B1A0003498FE /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		E55769082C02B678003498FE /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		2027222F2C018F3F00102EF7 /* Tchê Conecta */ = {
 			isa = PBXGroup;
 			children = (
+				E55769032C02B161003498FE /* Chat */,
 				E54DAA432C023FDB00B5A885 /* RequestServices  */,
 				202722592C022F6D00102EF7 /* Core */,
 				202722532C018FA100102EF7 /* Models */,
@@ -188,6 +195,7 @@
 				202722422C018F5F00102EF7 /* CustomTextField.swift */,
 				202722432C018F5F00102EF7 /* CustomTextStyle.swift */,
 				202722442C018F5F00102EF7 /* SearchableDropdown.swift */,
+				E55769062C02B1A0003498FE /* ChatCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +223,15 @@
 				202725102C0283FB00102EF7 /* ServiceRequestDetailView.swift */,
 			);
 			path = "RequestServices ";
+			sourceTree = "<group>";
+		};
+		E55769032C02B161003498FE /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E55769042C02B170003498FE /* ChatListView.swift */,
+				E55769082C02B678003498FE /* ChatDetailView.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,10 +308,12 @@
 				2027224A2C018F6600102EF7 /* CustomButtonStyle.swift in Sources */,
 				2027225D2C022F9B00102EF7 /* AppCoordinator.swift in Sources */,
 				2027224B2C018F6600102EF7 /* CustomPasswordField.swift in Sources */,
+				E55769052C02B170003498FE /* ChatListView.swift in Sources */,
 				E54DAA402C02209F00B5A885 /* HomeView.swift in Sources */,
 				202722312C018F3F00102EF7 /* Tche__ConectaApp.swift in Sources */,
 				E54DAA422C0220ED00B5A885 /* Menu.swift in Sources */,
 				202725002C02514A00102EF7 /* MaskedTextFieldModifier.swift in Sources */,
+				E55769072C02B1A0003498FE /* ChatCell.swift in Sources */,
 				202725112C0283FB00102EF7 /* ServiceRequestDetailView.swift in Sources */,
 				202722522C018F9A00102EF7 /* Profession.swift in Sources */,
 				2027250F2C0283D600102EF7 /* Testimonial.swift in Sources */,
@@ -306,6 +325,7 @@
 				2027250B2C027F6900102EF7 /* ServicesCell.swift in Sources */,
 				2027224C2C018F6600102EF7 /* CustomTextField.swift in Sources */,
 				2027224F2C018F6600102EF7 /* LoginView.swift in Sources */,
+				E55769092C02B678003498FE /* ChatDetailView.swift in Sources */,
 				E54DAA492C02606F00B5A885 /* Person.swift in Sources */,
 				2027224D2C018F6600102EF7 /* CustomTextStyle.swift in Sources */,
 			);
