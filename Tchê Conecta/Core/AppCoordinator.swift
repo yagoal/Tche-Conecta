@@ -90,6 +90,13 @@ final class AppCoordinator: ObservableObject {
 
         rootViewController.setViewControllers([loginHost, host], animated: true)
     }
+    
+    func showRank() {
+        let showRank = RankView().environmentObject(self)
+        let host = UIHostingController(rootView: showRank)
+        configureBackButton(for: host)
+        rootViewController.pushViewController(host, animated: true)
+    }
 
     func popToRoot() {
         rootViewController.popToRootViewController(animated: true)

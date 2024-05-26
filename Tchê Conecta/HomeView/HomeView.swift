@@ -58,7 +58,7 @@ struct HomeView: View {
         case "4":
             return coordinator.showMyPayments
         case "5":
-            return coordinator.showRequestServices
+            return coordinator.showRank
         default:
             return coordinator.showRequestServices
         }
