@@ -45,3 +45,11 @@ Equipe de Engenharia - [Val Lins](https://www.linkedin.com/in/val-lins-b6b767189
 ## Agradecimentos
 
 - Agradecimentos a todos os colaboradores e participantes do projeto, especialmente àqueles envolvidos diretamente na recuperação das comunidades afetadas pelas chuvas no Rio Grande do Sul.
+
+## Demonstração
+
+<details>
+  <summary>Clique aqui para ver o vídeo de demonstração do aplicativo</summary>
+  
+  https://github.com/yagoal/Tche-Conecta/assets/85469576/26327669-68ce-4def-92b6-8b6dca5c73f9
+</details>
